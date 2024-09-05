@@ -1,0 +1,26 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.ch05.dao.User5Mapper">
+    <insert id="insertUser5">
+        insert into user5 (name,gender,age,addr) values (#{name},#{gender},#{age},#{addr});
+    </insert>
+    <select id="selectUser5" resultType="com.ch05.dto.User5DTO">
+        select * from user5 where seq = #{seq};
+    </select>
+    <select id="selectUser5s" resultType="com.ch05.dto.User5DTO">
+        select * from user5;
+    </select>
+    <update id="updateUser5">
+        update user5 set
+            name = #{name},
+            gender = #{gender},
+            age = #{age},
+            addr = #{addr}
+        where seq = #{seq};
+    </update>
+    <delete id="deleteUser5">
+        delete from user5 where seq = #{seq};
+    </delete>
+</mapper>

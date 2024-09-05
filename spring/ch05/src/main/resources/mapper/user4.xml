@@ -1,0 +1,30 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 패키지 매퍼설정 -->
+<mapper namespace="com.ch05.dao.User4Mapper">
+    <insert id="insertUser4">
+        insert into user4 values (#{uid},#{name},#{gender},#{age},#{hp},#{addr});
+    </insert>
+    <!-- select는 return값이 있기 때문에 리턴 값 패키지 포함해서 입력-->
+    <select id="selectUser4" resultType="com.ch05.dto.User4DTO">
+        select * from user4 where uid = #{uid};
+    </select>
+    <!-- 알아서 리스트 만들어줌 -->
+    <select id="selectUser4s" resultType="com.ch05.dto.User4DTO">
+        select * from user4;
+    </select>
+    <update id="updateUser4">
+        update user4 set
+        name = #{name},
+        gender = #{gender},
+        age = #{age},
+        hp = #{hp},
+        addr = #{addr}
+        where uid = #{uid};
+    </update>
+    <delete id="deleteUser4">
+        delete from user4 where uid = #{uid};
+    </delete>
+</mapper>
