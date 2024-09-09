@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>User4::list</title>
+</head>
+<body>
+<h3>User4 목록</h3>
+
+<a th:href="@{/index}">처음으로</a>
+<a th:href="@{/user4/register}">등록</a>
+
+<table border="1">
+    <tr>
+        <th>아이디</th>
+        <th>이름</th>
+        <th>성별</th>
+        <th>나이</th>
+        <th>휴대폰</th>
+        <th>주소</th>
+        <th>관리</th>
+    </tr>
+        <tr th:each="user:${users}">
+            <td>[[${user.uid}]]</td>
+            <td>[[${user.name}]]</td>
+            <td>[[${user.gender}]]</td>
+            <td th:text="${user.age}"></td>
+            <td th:text="${user.hp}"></td>
+            <td th:text="${user.addr}"></td>
+            <td>
+                <a th:href="@{/user4/modify(uid=${user.uid})}">수정</a>
+                <a th:href="@{/user4/delete(uid=${user.uid})}">삭제</a>
+            </td>
+        </tr>
+</table>
+</body>
+</html>

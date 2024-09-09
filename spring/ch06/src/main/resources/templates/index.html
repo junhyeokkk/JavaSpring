@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>index</title>
+  <!--
+      날짜 : 2024/09/06
+      이름 : 최준혁
+      내용 : 6장 스프링부트 실습하기
+  -->
+</head>
+<body>
+    <h3>ch06. Spring Boot</h3>
+
+    <a href="/ch06/sub1/hello">hello</a>
+    <a href="/ch06/sub1/welcome">welcome</a>
+    <a href="/ch06/sub1/greeting">greeting</a>
+
+
+    <h4>타임리프 출력</h4>
+    <p>[[${str1}]]</p>
+    <p th:text="${str2}"></p>
+
+    <h4>타임리프 조건문</h4>
+    <p>
+      <span th:if="${user1.name == '홍길동'}">user1은 홍길동입니다.</span>
+      <span th:if="${user1.name == '김유신'}">user1은 김유신입니다.</span>
+    </p>
+
+    <p>
+      <span th:if="${user1.age >= 20}">user1은 20세 이상입니다.</span>
+      <span th:unless ="${user1.age >= 20}">user1은 20세 미만입니다.</span>
+    </p>
+
+    <p th:switch="${user2.age >= 20}">
+      <span th:case="true">user2는 20세 이상입니다.</span>
+      <span th:case="false">user2는 20세 미만입니다.</span>
+    </p>
+
+    <p>
+      <span th:if="${user4}">user4는 참입니다.</span>
+      <span th:unless="${user4}">user4는 거짓입니다.</span>
+    </p>
+
+    <h4>타임리프 반복문</h4>
+    <table border="1">
+      <tr th:each="user:${users}">
+        <td>[[${user.uid}]]</td>
+        <td>[[${user.name}]]</td>
+        <td th:text="${user.birth}"></td>
+        <td th:text="${user.hp}"></td>
+        <td th:text="${user.age}"></td>
+      </tr>
+    </table>
+
+    <h4>타임리프 링크</h4>
+    <a th:href="@{/sub1/hello}">hello</a>
+    <a th:href="@{/sub1/welcome}">welcome</a>
+    <a th:href="@{/sub1/greeting}">greeting</a>
+
+    <h4>타임리프 include</h4>
+    <th:block th:include="/include/_header.html"/>
+    <th:block th:include="/include/_footer.html"/>
+
+    <div th:insert="/include/_header.html"></div>
+    <div th:insert="/include/_footer.html"></div>
+
+    <div th:replace="/include/_header.html"></div>
+    <div th:replace="/include/_footer.html"></div>
+
+    <th:block th:include="~{include/template::header}"/>
+    <th:block th:include="~{include/template::footer}"/>
+</body>
+</html>
