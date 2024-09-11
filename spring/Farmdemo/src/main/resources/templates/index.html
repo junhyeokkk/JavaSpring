@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lagn="ko"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head th:replace="common/config :: config">
+    <!--    <title layout:title-pattern="$LAYOUT_TITLE : $CONTENT_TITLE">공통 타이틀</title>-->
+</head>
+<body>
+<!-- header -->
+<header th:replace="include/header::header"></header>
+<!-- sidebar -->
+
+<!-- content -->
+<th:block layout:fragment="content"></th:block>
+
+<!-- footer -->
+<footer th:replace="include/footer::footer"></footer>
+</body>
+</html>

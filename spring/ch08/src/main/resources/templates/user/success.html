@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity6">
+<head>
+    <meta charset="UTF-8">
+    <title>user::success</title>
+</head>
+<body>
+  <h3>로그인 성공</h3>
+
+  <p sec:authorize="isAuthenticated()"> <!--로그인 여부-->
+    아이디 : [[${#authentication.principal.user.uid}]]<br>
+    이름 : [[${#authentication.principal.user.name}]] <br>
+    생년월일 : <span sec:authentication="principal.user.birth"></span><br>
+    권한 : <span sec:authentication="principal.user.role"></span><br>
+    가입일 :<span sec:authentication="principal.user.rdate"></span><br>
+  </p>
+
+  <a th:href="@{/user/logout}">로그아웃</a>
+  <a th:href="@{/}">메인</a>
+</body>
+</html>

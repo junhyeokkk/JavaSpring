@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lagn="ko"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<link rel="stylesheet" th:href="@{/css/admin_header.css}">
+<link rel="stylesheet" th:href="@{/css/admin_footer.css}">
+<link rel="stylesheet" th:href="@{/css/admin_sidebar.css}">
+<link rel="stylesheet" th:href="@{/css/admin_list.css}">
+<link rel="stylesheet" th:href="@{/css/admin_order.css}">
+<link rel="stylesheet" th:href="@{/css/admin_register.css}">
+<link rel="stylesheet" th:href="@{/css/admin_user.css}">
+
+<body>
+<!-- header -->
+<header th:replace="include/admin_header::header"></header>
+<!-- sidebar -->
+<div th:replace="~{include/admin_sidebar::sidebar}"></div>
+<!-- content -->
+
+  <th:block th:if="${str1 == 'N'}" th:include="~{contents/list::list}"></th:block>
+  <th:block th:if="${str1 == 'N'}" th:include="~{contents/order::order}"></th:block>
+  <th:block th:if="${str1 == 'Y'}" th:include="~{contents/register::register}"></th:block>
+  <th:block th:if="${str1 == 'N'}" th:include="~{contents/user::user}"></th:block>
+<!-- footer -->
+<footer th:replace="include/admin_footer::footer"></footer>
+</body>
+</html>

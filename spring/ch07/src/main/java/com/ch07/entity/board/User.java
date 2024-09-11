@@ -26,5 +26,4 @@ public class User {
     @CreationTimestamp
     private LocalDateTime regDate;
 
-
 }

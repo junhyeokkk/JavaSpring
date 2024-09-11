@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>user::register</title>
+</head>
+<body>
+    <h3>user 회원가입</h3>
+    <form th:action="@{/user/register}" method="POST">
+        <input type="text" name="uid" placeholder="아이디 입력"><br>
+        <input type="password" name="pass" placeholder="비밀번호 입력"><br>
+        <input type="text" name="name" placeholder="이름 입력"><br>
+        <input type="date" name="birth" placeholder="생년월일 입력"><br>
+        <select name="role">
+            <option>ADMIN</option>
+            <option>STAFF</option>
+            <option>MANAGER</option>
+            <option>USER</option>
+        </select> <br>
+        <input type="submit" value="회원가입">
+    </form>
+</body>
+</html>

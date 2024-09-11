@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:fragment="order"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{/index}"
+      layout:fragment="content" >
+<link rel="stylesheet" th:href="@{/css/admin_order.css}">
+<head>
+    <meta charset="UTF-8">
+    <title>admin_order</title>
+</head>
+<body>
+<main  th:fragment="order">
+    <div id="section2_main">
+        <div id="section2_title">주문목록</div>
+        <div id="article_wrapper">
+            <div id="article1">
+                <table id="prod_table">
+                    <tr>
+                        <th><input type="checkbox"></th>
+                        <th>주문번호</th>
+                        <th>상품명</th>
+                        <th>판매가격</th>
+                        <th>수량</th>
+                        <th>배송비</th>
+                        <th>합계</th>
+                        <th>주문자</th>
+                        <th>주문일</th>
+                        <th>확인</th>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td>1001</td>
+                        <td>사과 500g</td>
+                        <td>4,000원</td>
+                        <td>2</td>
+                        <td>3,000원</td>
+                        <td>11,000원</td>
+                        <td>김유신</td>
+                        <td>2023-01-01 13:06:14</td>
+                        <td><a href="#">[상세확인]</a></td>
+                    </tr>
+                </table>
+            </div>
+            <div id="prod_heading">
+                <a href="#" id="prod_del">선택삭제</a>
+            </div>
+            <div id="list_num">
+                <a><</a>
+                <a href="#">[1]</a>
+                <a href="#">[2]</a>
+                <a href="#">[3]</a>
+                <a href="#">[4]</a>
+                <a href="#">[5]</a>
+                <a>></a>
+            </div>
+        </div>
+    </div>
+</main>
+</div>
+</body>
+</html>

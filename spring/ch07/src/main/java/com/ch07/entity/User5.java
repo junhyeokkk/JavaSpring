@@ -20,4 +20,14 @@ public class User5 {
     private int age;
     private String addr;
 
+
+    public User5DTO toDTO(){
+        return User5DTO.builder()
+                .seq(seq)
+                .name(name)
+                .gender(gender)
+                .age(age)
+                .addr(addr)
+                .build();
+    }
 }

@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:fragment="register"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{/index}"
+      layout:fragment="content" >
+<link rel="stylesheet" th:href="@{/css/admin_register.css}">
+<head>
+    <meta charset="UTF-8">
+    <title>admin_register</title>
+</head>
+<body>
+<main  th:fragment="register">
+    <div id="section2_main">
+        <div id="section2_title">상품등록</div>
+        <div id="article_wrapper">
+            <div id="article1">
+                <table id="prod_table">
+                    <tr id="prod_name">
+                        <td>상품명</td>
+                        <td><input type="text" name="input_prod_name"></td>
+                    </tr>
+                    <tr id="prod_category">
+                        <td>종류</td>
+                        <td>
+                            <select name="category">
+                                <option value="종류">종류</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr id="prod_price">
+                        <td>가격</td>
+                        <td><input type="text" name="input_prod_price"></td>
+                    </tr>
+                    <tr id="prod_point">
+                        <td>포인트</td>
+                        <td><input type="text" name="input_prod_point">포인트는 가격의 1%</td>
+                    </tr>
+                    <tr id="prod_discount">
+                        <td>할인</td>
+                        <td>
+                            <select name="discount">
+                                <option value="할인">5%</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr id="prod_delivery">
+                        <td>배송비</td>
+                        <td>
+                            <input type="radio">2,000원
+                            <input type="radio">3,000원
+                            <input type="radio">5,000원
+                            <input type="radio">무료
+                        </td>
+                    </tr>
+                    <tr id="prod_stock">
+                        <td>재고</td>
+                        <td><input type="text" name="input_prod_stock"></td>
+                    </tr>
+                    <tr id="prod_image">
+                        <td>상품이미지</td>
+                        <td>
+                            <a class="img_describe">상품목록 이미지(약 120 X 120)</a>
+                            <div>
+                                <input type="button" value="Choose File"/>
+                                <a>No file chosen</a>
+                            </div>
+                            <a class="img_describe">기본정보 이미지(약 240 X 240)</a>
+                            <div>
+                                <input type="button" value="Choose File"/>
+                                <a>No file chosen</a>
+                            </div>
+                            <a class="img_describe">상품설명 이미지(약 120 X 120)</a>
+                            <div>
+                                <input type="button" value="Choose File"/>
+                                <a>No file chosen</a>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr id="prod_etc">
+                        <td>기타</td>
+                        <td><textarea name="prod_etc"></textarea></td>
+                    </tr>
+                </table>
+            </div>
+            <div id="prod_heading">
+                <a href="#" id="prod_del">취소</a>
+                <a href="#" id="prod_reg">상품등록</a>
+            </div>
+        </div>
+    </div>
+</main>
+</div>
+</body>
+</html>
