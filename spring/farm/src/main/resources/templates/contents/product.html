@@ -1,0 +1,46 @@
+  <main th:fragment="product">
+    <div id="section2_main">
+        <div id="section2_title">상품목록</div>
+        <div id="article_wrapper">
+          <div id="article1">
+            <table id="prod_table">
+              <tr>
+                <th><input type="checkbox"></th>
+                <th>사진</th>
+                <th>상품번호</th>
+                <th>상품명</th>
+                <th>구분</th>
+                <th>가격</th>
+                <th>재고</th>
+                <th>등록일</th>
+              </tr>
+              <tr>
+                <td><input type="checkbox"></td>
+                <td><img id="sample_img" th:src="@{/admin_images/admin_logo}" alt="sample"></td>
+                <td>1011</td>
+                <td>사과 500g</td>
+                <td>과일</td>
+                <td>4,000원</td>
+                <td>100</td>
+                <td>2023-01-01</td>
+              </tr>
+            </table>
+          </div>
+          <div id="prod_heading">
+            <a href="#" id="prod_del">선택삭제</a>
+            <a href="#" id="prod_reg">상품등록</a>
+          </div>
+          <div id="list_num">
+            <a><</a>
+            <a href="#">[1]</a>
+            <a href="#">[2]</a>
+            <a href="#">[3]</a>
+            <a href="#">[4]</a>
+            <a href="#">[5]</a>
+            <a>></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>

@@ -9,8 +9,10 @@ public class MainController {
 
     @GetMapping(value = {"/", "/index"})
     public String index(Model model) {
-        String str1 = "Y";
-        model.addAttribute("str1", str1);
+        String group = "product";
+        String cate = "register";
+        model.addAttribute("group", group);
+        model.addAttribute("cate", cate);
         return "index";
     }
 

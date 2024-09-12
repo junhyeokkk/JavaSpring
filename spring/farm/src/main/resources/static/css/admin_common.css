@@ -1,0 +1,42 @@
+@charset "UTF-8";
+/* 초기화 */
+ul,ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #111;
+}
+
+input, textarea {
+    outline: none;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font: normal 12px "noto sans korean";
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+/* contents 영역 */
+.main_wrapper {
+    width: 980px;
+    height: 100%;
+    display: flex;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
