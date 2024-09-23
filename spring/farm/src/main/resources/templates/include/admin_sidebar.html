@@ -8,23 +8,23 @@
             상품관리
             <div>
               <li id="prod_list">
-                <a href="../product/list.html">상품목록</a>
+                <a th:href="@{/page(group='product',cate='list')}">상품목록</a>
               </li>
               <li id="prod_register">
-                <a href="../product/register.html">상품등록</a>
+                <a th:href="@{/page(group='product',cate='register')}">상품등록</a>
               </li>
             </div>
           </ul>
           <ul id="order_manage">
             주문관리
             <li id="order_list">
-              <a href="../order/list.html">주문목록</a>
+              <a th:href="@{/page(group='order',cate='list')}">주문목록</a>
             </li>
           </ul>
           <ul id="user_manage">
             회원관리
             <li id="user_list">
-              <a href="../user/list.html">회원목록</a>
+              <a th:href="@{/page(group='user',cate='list')}">회원목록</a>
             </li>
           </ul>
         </div>

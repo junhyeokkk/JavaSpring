@@ -134,3 +134,6 @@ td {
     font-weight: bold;
     text-decoration: underline;
 }
+#u_prod_table *{
+    font-weight: 700;
+}

@@ -111,8 +111,8 @@
   #article1 {
     width: 784px;
   }
-  
-  table {
+
+  #o_prod_table {
     width: 100%;
     height: auto;
     text-align: center;
@@ -120,20 +120,24 @@
     border-collapse: collapse;
     margin-top: 10px;
   }
-  
-  tr {
+
+#o_prod_table > tr {
     height: 42.5px;
   }
-  
-  th {
+
+th {
     background-color: #fbfbfb;
+    padding: 0 10px;
   }
-  
-  td {
+
+#o_prod_table > td {
     border-bottom: 1px solid #999999;
   }
+#o_prod_table  *{
+  font-weight: 800;
+}
   
-  #prod_heading {
+  #o_prod_heading {
     width: 784px;
     height: auto;
     display: flex;

@@ -121,14 +121,6 @@ table {
     margin-top: 10px;
 }
 
-tr:nth-of-type(1) {
-    height: 42.5px;
-}
-
-tr:nth-of-type(2) {
-    height: 89px;
-}
-
 th {
     background-color: #fbfbfb;
 }
@@ -137,7 +129,7 @@ td {
     border-bottom: 1px solid #999999;
 }
 
-#prod_heading {
+#p_prod_heading {
     width: 784px;
     height: auto;
     display: flex;
@@ -145,7 +137,7 @@ td {
     margin-top: 10px;
 }
 
-#prod_reg {
+#p_prod_reg {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -154,7 +146,7 @@ td {
     border: 1px solid #cccccc;
     border-radius: 20px;
 }
-#prod_del {
+#p_prod_del {
     border: none;
     font-weight: 700;
 }

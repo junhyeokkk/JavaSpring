@@ -1,10 +1,9 @@
-
 <main  th:fragment="register">
     <div id="section2_main">
         <div id="section2_title">상품등록</div>
         <div id="article_wrapper">
             <div id="article1">
-                <table id="prod_table">
+                <table id="r_prod_table">
                     <tr id="prod_name">
                         <td>상품명</td>
                         <td><input type="text" name="input_prod_name"></td>
@@ -12,8 +11,7 @@
                     <tr id="prod_category">
                         <td>종류</td>
                         <td>
-                            <select name="category">
-                                <option value="종류">종류</option>
+                            <select class="category" name="category">
                             </select>
                         </td>
                     </tr>
@@ -28,8 +26,7 @@
                     <tr id="prod_discount">
                         <td>할인</td>
                         <td>
-                            <select name="discount">
-                                <option value="할인">5%</option>
+                            <select class="discount" name="discount">
                             </select>
                         </td>
                     </tr>
@@ -72,7 +69,7 @@
                     </tr>
                 </table>
             </div>
-            <div id="prod_heading">
+            <div id="r_prod_heading">
                 <a href="#" id="prod_del">취소</a>
                 <a href="#" id="prod_reg">상품등록</a>
             </div>

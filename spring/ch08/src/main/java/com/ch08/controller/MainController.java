@@ -18,22 +18,18 @@ public class MainController {
     @GetMapping(value = {"/","/index"})
     public String index(Model model) {
 
+        // SecurityContextHolder를 참조해서 authentication 구하면 로그인을 하지 않아도 익명사용자 authentication를 가져옴
+        // security 설정에서 annoymous를 사용안함(disable)으로 설정해서 로그인 안했을때 authentication 값을 null로 가져오게함
         // 로그인 사용자 인증 객체 가져오기
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         log.info(authentication);
 
-        /*
-        MyUserDetails myUserDetails = (MyUserDetails) authentication.getPrincipal();
-
-        User user = null;
-        if(myUserDetails != null) {
-            user = myUserDetails.getUser();
-
+        if(authentication != null && authentication.getPrincipal() instanceof MyUserDetails) {
+            MyUserDetails myUserDetails = (MyUserDetails) authentication.getPrincipal();
+            User user = myUserDetails.getUser();
+            model.addAttribute("user", user);
         }
 
-        model.addAttribute("user", user);
-        log.info(myUserDetails.getUser());
-        */
         return "index";
     }
 
